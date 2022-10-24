@@ -1,0 +1,18 @@
+
+
+server:
+  port: 8080
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+    allow-circular-references: true
+  minio:
+    bucket: abc
+    access-key: admin
+    secret-key: adminuser
+    url: http://localhost:9001
+
+springdoc:
+  swagger-ui:
+    operations-sorter: method
