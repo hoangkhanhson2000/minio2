@@ -26,6 +26,9 @@ dependencies {
 	implementation 'org.springdoc:springdoc-openapi-ui:1.6.12'
 	implementation'io.minio:minio:8.4.5'
 	implementation 'com.jlefebure:spring-boot-starter-minio:1.10'
+// https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+	implementation 'org.apache.commons:commons-lang3:3.12.0'
+
 }
 
 tasks.named('test') {
