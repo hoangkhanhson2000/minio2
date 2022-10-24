@@ -1,7 +1,7 @@
 
 
 server:
-  port: 8080
+  port: 8081
 
 spring:
   main:
@@ -9,9 +9,9 @@ spring:
     allow-circular-references: true
   minio:
     bucket: abc
-    access-key: admin
-    secret-key: adminuser
-    url: http://localhost:9001
+    access-key: minioadmin
+    secret-key: minioadmin
+    url: http://10.40.3.24:9000
 
 springdoc:
   swagger-ui:

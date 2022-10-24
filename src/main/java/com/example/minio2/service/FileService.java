@@ -6,11 +6,15 @@ import com.jlefebure.spring.boot.minio.MinioConfigurationProperties;
 import io.minio.*;
 import io.minio.messages.Item;
 import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.stereotype.Service;
 
 import java.io.InputStream;
+
 import java.util.ArrayList;
 import java.util.List;
+
+
 
 @Service
 @Slf4j
@@ -46,6 +50,7 @@ public class FileService {
         return objects;
     }
 
+
     private String getPreSignedUrl(String filename) {
         return "http://localhost:8080/file/".concat(filename);
     }
@@ -64,7 +69,6 @@ public class FileService {
 
         return stream;
     }
-
     public File uploadFile(File request) {
         try {
             minioClient.putObject(PutObjectArgs.builder()
@@ -83,5 +87,9 @@ public class FileService {
                 .filename(request.getFile().getOriginalFilename())
                 .build();
     }
+
+
+
+
 
 }
